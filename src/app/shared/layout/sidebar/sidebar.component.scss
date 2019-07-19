@@ -1,0 +1,40 @@
+$sideBarClosedSize: 60px;
+
+.side-bar {
+  background-color: #484848;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: $sideBarClosedSize;
+  height: calc(100vh - 56px);
+  -webkit-transition: width 0.5s; /* Safari prior 6.1 */
+  transition: width 0.5s;
+  z-index: 9999;
+  &:hover {
+    width: 300px;
+  }
+  .nav-item {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0px;
+    .nav-link {
+      color: white;
+      padding: 0px;
+      i {
+        width: $sideBarClosedSize - 8px;
+        text-align: center;
+      }
+      span {
+        margin-left: 4px;
+      }
+      border-left: 4px solid transparent;
+      &.active,
+      &:hover {
+        color: #4ccead;
+        border-left: 4px solid #4ccead;
+      }
+    }
+  }
+}

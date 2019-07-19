@@ -1,0 +1,27 @@
+<div class="gauge-widget">
+  <svg
+    attr.height="{{ height }}px"
+    attr.width="{{ width }}px"
+    [ngStyle]="{ height: height / 2 }"
+  >
+    <path
+      d="M0 110 A1 1 0 0 1 200 100"
+      stroke="black"
+      stroke-width="3"
+      fill="none"
+    ></path>
+    <line
+      attr.x1="{{ x1 }}"
+      attr.y1="{{ y1 }}"
+      attr.x2="{{ x2 }}"
+      attr.y2="{{ y2 }}"
+      style="stroke:rgb(255,0,0);stroke-width:2"
+    />
+    Sorry, your browser does not support inline SVG.
+  </svg>
+  <div class="row values">
+    <div class="col text-left">{{ minValue }}</div>
+    <div class="col text-center">{{ currentValue }}</div>
+    <div class="col text-right">{{ maxValue }}</div>
+  </div>
+</div>

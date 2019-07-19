@@ -1,0 +1,11 @@
+.gauge-widget {
+  padding: 20px;
+  display: inline-block;
+
+  .values {
+    padding: 0px;
+    .col {
+      padding: 0px;
+    }
+  }
+}

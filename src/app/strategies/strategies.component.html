@@ -1,0 +1,12 @@
+<div>
+  <h1>My Strategies</h1>
+  <div class="strategy-list">
+    <div
+      *ngFor="let strategy of strategies"
+      class="strategy"
+      routerLink="/strategy/{{ strategy.id }}"
+    >
+      {{ strategy.title }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <h1>{{ strategy.title }}</h1>
+  <hr />
+  <h2>Conditions:</h2>
+  <div *ngFor="let condition of strategy.conditions" class="condition">
+    <h3>{{ condition.id }}</h3>
+    <app-gauge-widget
+      [minValue]="condition.min"
+      [maxValue]="condition.max"
+      [currentValue]="condition.value"
+    >
+    </app-gauge-widget>
+  </div>
+</div>
